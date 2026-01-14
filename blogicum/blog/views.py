@@ -72,7 +72,7 @@ def index(request):
 
 
 def post_detail(request, id):
-    if posts[id] != None:
+    if posts[id] is not None:
         template = "blog/detail.html"
         context = {"post": posts[id]}
         return render(request, template, context)
